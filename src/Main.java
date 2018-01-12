@@ -1,7 +1,10 @@
 import org.junit.Test;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Main {
 
@@ -91,12 +94,14 @@ public class Main {
     }
 
     public static String filepath =
-    "D:\\12.1 OFFSHORE\\F0033(E21A.02)-GTC\\Document Transmittal\\F0033-GTC-0026-T";
+    "D:\\12.1 OFFSHORE\\F0040(FD1A.01)-GPK\\Document Transmittal";
 
     @Test
     public void Name() throws Exception {
         readfile(filepath);
     }
+
+
 
     public static void main(String[] args) throws Exception {
         File dirFile = new File(filepath);
@@ -106,6 +111,7 @@ public class Main {
              dirAllStrArr) {
             System.out.println(str);
         }
+        System.out.println(dirAllStrArr.size());
 //        System.out.println(dirAllStrArr);
     }
 }
